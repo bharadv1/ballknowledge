@@ -11,7 +11,7 @@ import AnswerReveal from "@/components/AnswerReveal";
 import CurrentClue from "@/components/CurrentClue";
 import GuessClock from "@/components/GuessClock";
 import PlayerAnswerBar from "@/components/PlayerAnswerBar";
-import { dailyPuzzle } from "@/data/dailyPuzzle";
+import { getDailyPuzzle } from "@/data/dailyPuzzle";
 import eligiblePlayers from "@/data/eligible_players.json";
 
 type Player = {
@@ -37,7 +37,7 @@ export default function GamePage() {
     const [guesses, setGuesses] = useState<Player[]>([]);
     const [message, setMessage] = useState("");
     const [gameOver, setGameOver] = useState(false);
-
+    const dailyPuzzle = getDailyPuzzle();
     const playerAttributes = playerAttributesData as PlayerAttributes[];
 
     const answerAttributes = playerAttributes.find(
