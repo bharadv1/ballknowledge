@@ -24,3 +24,32 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+@font-face {
+  font-family: "ShotClock";
+  src: url("/DSEG7Classic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.font-shotclock {
+  font-family: "ShotClock", monospace;
+}
+
+@keyframes shotClockPulse {
+  0% {
+    transform: scale(1.18);
+    opacity: 0.45;
+  }
+
+  55% {
+    transform: scale(0.96);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
